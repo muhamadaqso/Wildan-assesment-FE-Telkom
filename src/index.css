@@ -49,3 +49,7 @@ code {
   background: lightgray;
   border-radius: 8px;
 }
+
+.form-control {
+  background-color: #e9ecef9c !important;
+}
