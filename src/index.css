@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.font-weight-semibold {
+  font-weight: 600;
+}
+
 .user-info {
 
 }

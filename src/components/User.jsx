@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Spinner, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faUser } from '@fortawesome/free-solid-svg-icons';
 
 class User extends React.Component {
     constructor() {
@@ -41,7 +41,7 @@ class User extends React.Component {
                             <Link className="user-info-profile" to={`/user/${user.login}`}>
                                 <img src={user.avatar_url} alt={`${user.login} avatar`}/>
                                 <div className="my-3">
-                                    <span className="px-2 py-1" >{user.login}</span>
+                                <span className="px-2 py-1" > <FontAwesomeIcon icon={faUser} className="mr-2" />{user.login}</span>
                                 </div>
                                 <h6 className="mt-2">{user.name}</h6>
                                 <p>{user.bio}</p>
@@ -50,6 +50,21 @@ class User extends React.Component {
                     </div>
                 </div>
                 <hr/>
+
+                    <div className="row">
+                        <div className="col-4 text-center">
+                            <p className="mb-1 font-weight-semibold">{user.public_repos}</p>
+                            <p>Repository</p>
+                        </div>
+                        <div className="col-4 text-center">
+                            <p className="mb-1 font-weight-semibold">{user.followers}</p>
+                            <p>Followers</p>
+                        </div>
+                        <div className="col-4 text-center">
+                            <p className="mb-1 font-weight-semibold">{user.following}</p>
+                            <p>following</p>
+                        </div>
+                    </div>
             </div>
         );
     }
