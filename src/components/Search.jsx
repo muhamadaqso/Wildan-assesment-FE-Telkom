@@ -16,8 +16,8 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div className="container text-center mt-5">
-                <div className="w-50 mx-auto mb-4">
+            <div className="container text-center mt-5 pt-5">
+                <div className="w-50 mx-auto mb-5">
                     <img className="w-75" src={logo} alt=""/>
                 </div>
                 <form className="row justify-content-center" onSubmit={this._handleSubmit}>
