@@ -5,7 +5,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="main-app">
-                <header className="main-header">
+                <header className="main-header shadow-sm">
                      <Navbar bg="dark" variant="dark">
                       <Navbar.Brand href="/" className="mx-auto">- Github Source -</Navbar.Brand>
                     </Navbar>

@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.user-info {
+
+}
+.user-info .user-info-profile {
+  color: black;
+}
+.user-info .user-info-profile:hover {
+  text-decoration: none;
+}
+.user-info .user-info-profile span {
+  background: #f4d26b;
+  border-radius: 14px;
+}
+.user-info .user-info-profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
