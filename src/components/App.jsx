@@ -1,20 +1,21 @@
-// import { Link } from 'react-router-dom';
+import React from 'react';
 import { Navbar} from 'react-bootstrap';
-import Search from './Search'
 
-function App() {
-  return (
-    <div className="main-app">
+class App extends React.Component {
+    render() {
+        return (
+            <div className="main-app">
                 <header className="main-header">
-                    <Navbar bg="dark" variant="dark">
+                     <Navbar bg="dark" variant="dark">
                       <Navbar.Brand href="/" className="mx-auto">- Github Source -</Navbar.Brand>
                     </Navbar>
                 </header>
                 <main className="main-content">
-                    <Search />
+                    {this.props.children}
                 </main>
             </div>
-  );
-}
+        );
+    }
+};
 
 export default App;
