@@ -31,11 +31,11 @@ class User extends React.Component {
         const user = this.state.user;
 
         return (
-            <div className="container mt-4">
+            <div className="container mt-4 user-info">
                 
                 <Button variant="primary" href="/"><FontAwesomeIcon icon={faAngleLeft} className="mr-1" />Back</Button>
                 <hr/>
-                <div className="user-info text-center mt-3">
+                <div className=" text-center mt-3">
                     <div className="row">
                         <div className="col-md-6 shadow-sm mx-auto  py-4 ">
                             <Link className="user-info-profile" to={`/user/${user.login}`}>

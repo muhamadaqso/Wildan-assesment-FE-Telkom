@@ -20,14 +20,14 @@ code {
   cursor: pointer;
 }
 
-.user-info {
-
+.user-info a{
+  color: black;
+}
+.user-info a:hover {
+  text-decoration: none;
 }
 .user-info .user-info-profile {
   color: black;
-}
-.user-info .user-info-profile:hover {
-  text-decoration: none;
 }
 .user-info .user-info-profile span {
   background: #f4d26b;
