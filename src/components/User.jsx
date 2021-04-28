@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Spinner } from 'react-bootstrap';
 
 class User extends React.Component {
     constructor() {
@@ -20,6 +21,11 @@ class User extends React.Component {
     }
 
     render() {
+
+        if (!this.state.user) {
+            return (<div className="user-page text-center mt-5"><Spinner animation="border" role="status"></Spinner> LOADING...</div>);
+        }
+        
         const user = this.state.user;
 
         return (
