@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 class Followers extends React.Component {
     constructor() {
@@ -18,6 +20,12 @@ class Followers extends React.Component {
         );
     }
 
+    handleClick(e)  {
+        console.log(e)
+        window.location = '/user/'+ e;
+      };
+    
+
     render() {
         if (!this.state.followers) {
             return <div>LOADING FOLLOWERS...</div>
@@ -27,20 +35,20 @@ class Followers extends React.Component {
             const items = [];
             for (const [index, value] of followers.entries()) {
                 items.push(
-                    <div className="col-md-4 mb-2" key={index}>
-                        <div className="d-flex">
+                    <div className="col-md-4 mb-3 cursor-pointer" key={index} 
+                    onClick={() => this.handleClick(value.login)}>
+                        <div className="text-center p-3 shadow-sm">
                             <img src={value.avatar_url} alt=""/>
-                            <p className="ml-2">{value.login}</p>
+                            <p className="mt-3">{value.login} <FontAwesomeIcon icon={faAngleRight} className="ml-2" /></p>
                         </div>
                     </div>
                 )
               }
 
-            console.log(followers)
             return (
             <div className="followers-page container">
                 <h6>Followers of {this.props.params.username} :</h6>
-                <div className="row mt-3">
+                <div className="row mt-4">
                     {items}
                 </div>
             </div>
