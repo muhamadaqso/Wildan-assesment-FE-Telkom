@@ -1,5 +1,8 @@
 import React from 'react';
+import logo from '../assets/github-logo.png'
 import { browserHistory as history } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 class Search extends React.Component {
     constructor(props) {
@@ -13,14 +16,16 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div className="container text-center mt-4">
-                <h2 className="mb-4">Enter a GitHub username</h2>
+            <div className="container text-center mt-5">
+                <div className="w-50 mx-auto mb-4">
+                    <img className="w-75" src={logo} alt=""/>
+                </div>
                 <form className="row justify-content-center" onSubmit={this._handleSubmit}>
-                    <div className="col-auto">
-                        <input ref="userInput" className="form-control" type="text" />
-                    </div>
-                    <div className="col-auto">
-                        <button className="btn btn-dark">Search</button>
+                    <div className="col-8">
+                    <div className="input-group mb-3">
+                        <span className="input-group-text" id="basic-addon1"><FontAwesomeIcon icon={faSearch} /></span>
+                        <input ref="userInput" className="form-control" type="text" placeholder="Enter a github username.." />
+                        </div>
                     </div>
                 </form>
             </div>
