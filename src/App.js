@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// import { Link } from 'react-router-dom';
+import { Nav, Navbar, Form, FormControl, Button, NavDropdown} from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="main-app">
+                <header className="main-header">
+                    <Navbar bg="dark" variant="dark">
+                      <Navbar.Brand href="/" className="mx-auto">- Github Source -</Navbar.Brand>
+                    </Navbar>
+                </header>
+                <main className="main-content">
+                    {/* {this.props.children} */}
+                </main>
+            </div>
   );
 }
 
