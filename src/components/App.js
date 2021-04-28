@@ -1,5 +1,6 @@
 // import { Link } from 'react-router-dom';
 import { Navbar} from 'react-bootstrap';
+import Search from './Search'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
                     </Navbar>
                 </header>
                 <main className="main-content">
-                    {/* {this.props.children} */}
+                    <Search />
                 </main>
             </div>
   );
