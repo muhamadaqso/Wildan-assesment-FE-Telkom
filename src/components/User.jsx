@@ -64,8 +64,10 @@ class User extends React.Component {
                                 </Link>
                             </div>
                             <div className="col-4 text-center cursor-pointer">
-                                <p className="mb-1 font-weight-semibold">{user.following}</p>
-                                <p>following</p>
+                                <Link  to={`/user/${user.login}/following`}>
+                                    <p className="mb-1 font-weight-semibold">{user.following}</p>
+                                    <p>following</p>
+                                </Link>
                             </div>
                         </div>
 

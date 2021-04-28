@@ -9,6 +9,7 @@ import App from './components/App';
 import Search from './components/Search';
 import User from './components/User';
 import Followers from './components/Followers';
+import Following from './components/Following';
 
 const routes = (
     <Router history={browserHistory}>
@@ -16,6 +17,7 @@ const routes = (
             <IndexRoute component={Search}/>
             <Route path="user/:username" component={User}>
               <Route path="followers" component={Followers} />
+              <Route path="following" component={Following} />
             </Route>
         </Route>
     </Router>
