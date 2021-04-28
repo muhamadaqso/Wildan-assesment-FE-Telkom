@@ -21,7 +21,6 @@ class Following extends React.Component {
     }
 
     handleClick(e)  {
-        console.log(e)
         window.location = '/user/'+ e;
       };
     

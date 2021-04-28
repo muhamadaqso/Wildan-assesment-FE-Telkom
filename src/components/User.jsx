@@ -52,7 +52,7 @@ class User extends React.Component {
                     </div>
                     <hr/>
 
-                        <div className="row">
+                        <div className="row sticky-top bg-white py-3 shadow-sm">
                             <div className="col-4 text-center cursor-pointer">
                                 <Link  to={`/user/${user.login}/repository`}>
                                     <p className="mb-1 font-weight-semibold">{user.public_repos}</p>

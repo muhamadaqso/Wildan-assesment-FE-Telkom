@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 class Repository extends React.Component {
     constructor() {
@@ -20,6 +20,10 @@ class Repository extends React.Component {
         );
     }
 
+    handleClick(e)  {
+        window.open(e, '_blank');
+      };
+
     render() {
         if (!this.state.repos) {
             return <div>LOADING REPOSITORY...</div>
@@ -30,17 +34,23 @@ class Repository extends React.Component {
             for (const [index, value] of repos.entries()) {
                 items.push(
                     <div className="col-md-4 mb-3 cursor-pointer" key={index} 
-                    onClick={() => this.handleClick(value.login)}>
-                        <div className="text-center p-3 shadow-sm">
-                            <img src={value.avatar_url} alt=""/>
-                            <p className="mt-3">{value.login} <FontAwesomeIcon icon={faAngleRight} className="ml-2" /></p>
+                    onClick={() => this.handleClick(value.html_url)}>
+                        <div className="p-3 shadow-sm">
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <p>{value.full_name}</p>
+                                </div>
+                                <div className="col-auto ml-auto">
+                                    <span className="px-2 py-1">{value.size}  <FontAwesomeIcon icon={faStar} className="ml-1" /></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )
               }
 
             return (
-            <div className="followers-page container">
+            <div className="repos-page container">
                 <h6>{this.props.params.username}'s' Repository:</h6>
                 <div className="row mt-4">
                     {items}
