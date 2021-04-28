@@ -1,4 +1,5 @@
 import React from 'react';
+import empty from '../assets/empty-state.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,6 +33,7 @@ class Followers extends React.Component {
             
             const followers = this.state.followers;
             const items = [];
+
             for (const [index, value] of followers.entries()) {
                 items.push(
                     <div className="col-md-4 mb-3 cursor-pointer" key={index} 
@@ -43,6 +45,18 @@ class Followers extends React.Component {
                     </div>
                 )
               }
+
+            if (items.length === 0) {
+                return (
+                    <div className="container">
+                        <div className="text-center">
+                        <img className="w-100" src={empty} alt=""/>
+                        </div>
+                    </div>
+                );
+            }
+
+           
 
             return (
             <div className="followers-page container">

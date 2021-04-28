@@ -1,4 +1,5 @@
 import React from 'react';
+import empty from '../assets/empty-state.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -31,6 +32,8 @@ class Repository extends React.Component {
             
             const repos = this.state.repos;
             const items = [];
+
+            
             for (const [index, value] of repos.entries()) {
                 items.push(
                     <div className="col-md-4 mb-3 cursor-pointer" key={index} 
@@ -48,6 +51,17 @@ class Repository extends React.Component {
                     </div>
                 )
               }
+
+        if (items.length === 0) {
+            return (
+                <div className="container">
+                    <div className="text-center">
+                    <img className="w-100" src={empty} alt=""/>
+                    </div>
+                </div>
+            );
+        }
+
 
             return (
             <div className="repos-page container">
