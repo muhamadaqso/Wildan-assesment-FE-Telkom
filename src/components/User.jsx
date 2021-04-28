@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Spinner, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 class User extends React.Component {
     constructor() {
@@ -30,7 +32,9 @@ class User extends React.Component {
 
         return (
             <div className="container mt-4">
-                <Button variant="primary" href="/">Back</Button>
+                
+                <Button variant="primary" href="/"><FontAwesomeIcon icon={faAngleLeft} className="mr-1" />Back</Button>
+                <hr/>
                 <div className="user-info text-center mt-3">
                     <div className="row">
                         <div className="col-md-6 shadow-sm mx-auto  py-4 ">
