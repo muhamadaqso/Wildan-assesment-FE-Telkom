@@ -16,6 +16,10 @@ code {
   font-weight: 600;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .user-info {
 
 }

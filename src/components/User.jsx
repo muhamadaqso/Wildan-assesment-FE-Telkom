@@ -52,18 +52,25 @@ class User extends React.Component {
                 <hr/>
 
                     <div className="row">
-                        <div className="col-4 text-center">
+                        <div className="col-4 text-center cursor-pointer">
                             <p className="mb-1 font-weight-semibold">{user.public_repos}</p>
                             <p>Repository</p>
                         </div>
-                        <div className="col-4 text-center">
-                            <p className="mb-1 font-weight-semibold">{user.followers}</p>
-                            <p>Followers</p>
+                        <div className="col-4 text-center cursor-pointer">
+                            <Link  to={`/user/${user.login}/followers`}>
+                                <p className="mb-1 font-weight-semibold">{user.followers}</p>
+                                <p>Followers</p>
+                            </Link>
                         </div>
-                        <div className="col-4 text-center">
+                        <div className="col-4 text-center cursor-pointer">
                             <p className="mb-1 font-weight-semibold">{user.following}</p>
                             <p>following</p>
                         </div>
+                    </div>
+
+                    <hr/>
+                    <div>
+                        {this.props.children}
                     </div>
             </div>
         );
